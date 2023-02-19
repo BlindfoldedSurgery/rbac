@@ -1,0 +1,12 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ .Values.postgresoperator.clusterrolebinding.name }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: {{ .Values.postgresoperator.clusterrole.name }}
+subjects:
+- kind: ServiceAccount
+  name: {{ .Values.postgresoperator.serviceaccount.name }}
+  namespace: {{ .Values.postgresoperator.namespace }}

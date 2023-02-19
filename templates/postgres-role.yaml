@@ -5,10 +5,12 @@ metadata:
   namespace: {{ .Values.postgresoperator.namespace }}
 rules:
 - apiGroups:
+  - ""
   - apps
   - batch
   - networking.k8s.io
   - acid.zalan.do
+  - rbac.authorization.k8s.io
   resources:
   - deployments
   - configmaps
@@ -23,6 +25,8 @@ rules:
   - cronjobs
   - jobs
   - postgresqls
+  - serviceaccounts
+  - operatorconfigurations
   verbs:
   - list
   - get

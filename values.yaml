@@ -57,5 +57,9 @@ postgresoperator:
     name: postgresoperator-github
   rolebinding:
     name: postgresoperator-github
+  clusterrole:
+    name: postgresoperator-github
+  clusterrolebinding:
+    name: postgresoperator-github
   serviceaccount:
     name: postgresoperator-github
