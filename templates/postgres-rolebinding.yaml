@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: {{ .Values.postgresoperator.rolebinding.name }}
+  namespace: {{ .Values.postgresoperator.namespace }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: {{ .Values.postgresoperator.role.name }}
+subjects:
+- kind: ServiceAccount
+  name: {{ .Values.postgresoperator.serviceaccount.name }}
+  namespace: {{ .Values.postgresoperator.namespace }}

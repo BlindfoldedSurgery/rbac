@@ -1,0 +1,61 @@
+namespaces:
+- recipes
+- static
+- timhatdiehandandermaus
+- openalcoholics
+- wooglife
+- telegram-bots
+- monica
+- minio
+- charts
+- festival
+- abfahrt
+
+github:
+  clusterrole:
+    name: github
+  clusterrolebinding:
+    name: github    
+  serviceaccounts:
+    recipes:
+      name: github-mealie
+      namespace: recipes
+    static:
+      name: github
+      namespace: static
+    tim:
+      name: github
+      namespace: timhatdiehandandermaus
+    openalcoholics:
+      name: github
+      namespace: openalcoholics
+    wooglife:
+      name: github
+      namespace: wooglife
+    telegrambots:
+      name: github
+      namespace: telegram-bots
+    monica:
+      name: github
+      namespace: monica
+    default:
+      name: github
+      namespace: default
+    minio:
+      name: github
+      namespace: minio
+    charts:
+      name: github
+      namespace: charts
+    abfahrt:
+      name: github
+      namespace: abfahrt
+
+postgresoperator:
+  namespace: postgres-operator
+  role:
+    name: postgresoperator-github
+  rolebinding:
+    name: postgresoperator-github
+  serviceaccount:
+    name: postgresoperator-github
