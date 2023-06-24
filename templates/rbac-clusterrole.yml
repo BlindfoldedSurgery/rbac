@@ -4,5 +4,5 @@ metadata:
   name: {{ .Values.rbac.clusterrole.name }}
 rules:
 - apiGroups: ["", "rbac.authorization.k8s.io"]
-  resources: ["serviceaccounts", "clusterroles", "clusterrolebindings", "roles", "rolebindings", "namespaces"]
+  resources: ["serviceaccounts", "clusterroles", "clusterrolebindings", "roles", "rolebindings", "namespaces", "secrets"]
   verbs: ["list", "get", "update", "create", "watch", "edit", "patch", "delete"]
