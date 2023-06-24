@@ -111,3 +111,12 @@ postgresoperator:
     name: postgresoperator-github
   serviceaccount:
     name: postgresoperator-github
+
+rbac:
+  namespace: mgmt
+  clusterrole:
+    name: rbac-github
+  clusterrolebinding:
+    name: rbac-github
+  serviceaccount:
+    name: rbac-github
