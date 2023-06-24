@@ -5,7 +5,7 @@ secretname=$2
 filename=$(openssl rand -hex 12).yml
 
 # TOKEN=$(kubectl -n $namespace create token $serviceaccount)
-TOKEN=$(kubectl -n $namespace get secret -o json $2-token | jq -r '.data.token' | base64 -d)
+TOKEN=$(kubectl --insecure-skip-tls-verify=true -n $namespace get secret -o json $2-token | jq -r '.data.token' | base64 -d)
 
 kubectl config view --flatten --minify > $filename
 

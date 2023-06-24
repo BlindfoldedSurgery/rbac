@@ -1,15 +1,24 @@
 namespaces:
-- recipes
+- postgres-operator
+# - recipes
 - static
 - timhatdiehandandermaus
-- openalcoholics
+# - openalcoholics
 - wooglife
 - telegram-bots
-- monica
-- minio
-- charts
+# - monica
+# - minio
+# - charts
 - festival
-- abfahrt
+# - abfahrt
+- twittergram
+- bob
+- cancerbot
+- misfortune
+- vodka-az
+- papyrus
+- pypi
+- action-example
 
 github:
   clusterrole:
@@ -17,39 +26,78 @@ github:
   clusterrolebinding:
     name: github    
   serviceaccounts:
-    recipes:
-      name: github-mealie
-      namespace: recipes
+    # recipes:
+    #   name: github-mealie
+    #   namespace: recipes
     static:
       name: github
       namespace: static
     tim:
       name: github
       namespace: timhatdiehandandermaus
-    openalcoholics:
-      name: github
-      namespace: openalcoholics
+    # openalcoholics:
+    #   name: github
+    #   namespace: openalcoholics
     wooglife:
       name: github
       namespace: wooglife
     telegrambots:
       name: github
       namespace: telegram-bots
-    monica:
+    # monica:
+    #   name: github
+    #   namespace: monica
+    # default:
+    #   name: github
+    #   namespace: default
+    # minio:
+    #   name: github
+    #   namespace: minio
+    # charts:
+    #   name: github
+    #   namespace: charts
+    # abfahrt:
+    #   name: github
+    #   namespace: abfahrt
+    festival:
       name: github
-      namespace: monica
-    default:
+      namespace: festival
+    twittergram:
       name: github
-      namespace: default
-    minio:
+      namespace: twittergram
+    telegramsonglinkerbot:
       name: github
-      namespace: minio
-    charts:
+      namespace: telegram-songlinker-bot
+    bob:
       name: github
-      namespace: charts
-    abfahrt:
+      namespace: bob
+    cancer:
       name: github
-      namespace: abfahrt
+      namespace: cancerbot
+    misfortune:
+      name: github
+      namespace: misfortune
+    vodkaaz:
+      name: github
+      namespace: vodka-az
+    papyrus:
+      name: github
+      namespace: papyrus
+    pypi:
+      name: github
+      namespace: pypi
+    actionhelm:
+      name: github
+      namespace: action-example
+
+github_config_renewal:
+  namespace: mgmt
+  serviceaccount:
+    name: github-config-renewal
+  clusterrole:
+    name: github-config-renewal
+  clusterrolebinding:
+    name: github-config-renewal
 
 postgresoperator:
   namespace: postgres-operator
