@@ -3,6 +3,6 @@ kind: ClusterRole
 metadata:
   name: {{ .Values.rbac.clusterrole.name }}
 rules:
-- apiGroups: ["", "rbac.authorization.k8s.io"]
-  resources: ["serviceaccounts", "clusterroles", "clusterrolebindings", "roles", "rolebindings", "namespaces", "secrets"]
+- apiGroups: ["", "apps", "batch", "networking.k8s.io", "acid.zalan.do", "rbac.authorization.k8s.io"]
+  resources: ["deployments", "configmaps", "secrets", "persistentvolumes", "persistentvolumeclaims", "pods", "services", "ingresses", "statefulsets", "replicasets", "cronjobs", "jobs", "postgresqls", "serviceaccounts", "clusterroles", "clusterrolebindings", "roles", "rolebindings"]
   verbs: ["list", "get", "update", "create", "watch", "edit", "patch", "delete"]
