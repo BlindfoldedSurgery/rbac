@@ -3,7 +3,7 @@ namespaces:
 # - recipes
 - static
 - timhatdiehandandermaus
-# - openalcoholics
+- openalcoholics
 - wooglife
 - telegram-bots
 # - monica
@@ -35,9 +35,9 @@ github:
     tim:
       name: github
       namespace: timhatdiehandandermaus
-    # openalcoholics:
-    #   name: github
-    #   namespace: openalcoholics
+    openalcoholics:
+      name: github
+      namespace: openalcoholics
     wooglife:
       name: github
       namespace: wooglife
