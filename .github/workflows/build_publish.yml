@@ -18,22 +18,6 @@ jobs:
         with:
           exec: helm lint --strict
 
-  build_push_docker:
-    runs-on: ubuntu-latest
-    needs: lint
-    steps:
-      - uses: actions/checkout@v3
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Build the tagged Docker image
-        run: docker build -t ghcr.io/torbencarstens/authorizations:${GITHUB_SHA} .
-      - name: Push the tagged Docker image
-        run: docker push ghcr.io/torbencarstens/authorizations:${GITHUB_SHA}
-
   deploy:
     name: "Publish to k8s"
     runs-on: ubuntu-latest
@@ -43,7 +27,12 @@ jobs:
       - name: update password in manifest.yml
         run: sed -i -e "s#__TAG__#${GITHUB_SHA}#g" values.yaml
       - name: install helm chart
-        uses: WyriHaximus/github-action-helm3@v2
-        with: 
-          exec: helm upgrade authorizations . --install --atomic
+        uses: OpenAlcoholics/github-action-helm@v0.1.5
+        with:
+          subcommand: upgrade
+          ref: .
+          release_name: rbac
+          namespace: mgmt
+          atomic: true
+          install: true
           kubeconfig: ${{ secrets.KUBECONFIG_RAW }}
