@@ -10,7 +10,7 @@ namespaces:
 # - minio
 # - charts
 - festival
-# - abfahrt
+- abfahrt
 - twittergram
 - bob
 - cancerbot
@@ -56,9 +56,9 @@ github:
     # charts:
     #   name: github
     #   namespace: charts
-    # abfahrt:
-    #   name: github
-    #   namespace: abfahrt
+    abfahrt:
+      name: github
+      namespace: abfahrt
     festival:
       name: github
       namespace: festival
