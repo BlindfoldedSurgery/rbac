@@ -24,6 +24,7 @@ namespaces:
   - istio-system
   # - cert-manager
   - argocd
+  # - monitoring
 
 github:
   clusterrole:
