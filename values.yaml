@@ -25,6 +25,7 @@ namespaces:
   # - cert-manager
   - argocd
   # - monitoring
+  - trexflanken
 
 github:
   clusterrole:
@@ -110,6 +111,9 @@ github:
     # argocd:
     #   name: github
     #   namespace: argocd
+    trexflanken:
+      name: github
+      namespace: trexflanken
 
 github_config_renewal:
   namespace: mgmt
