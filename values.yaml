@@ -95,21 +95,21 @@ github:
     actionhelm:
       name: github
       namespace: action-example
-    observability:
-      name: github
-      namespace: observability
-    longhorn:
-      name: github
-      namespace: longhorn-system
-    istio:
-      name: github
-      namespace: istio-system
-    certmanager:
-      name: github
-      namespace: cert-manager
-    argocd:
-      name: github
-      namespace: argocd
+    # observability:
+    #   name: github
+    #   namespace: observability
+    # longhorn:
+    #   name: github
+    #   namespace: longhorn-system
+    # istio:
+    #   name: github
+    #   namespace: istio-system
+    # certmanager:
+    #   name: github
+    #   namespace: cert-manager
+    # argocd:
+    #   name: github
+    #   namespace: argocd
 
 github_config_renewal:
   namespace: mgmt
