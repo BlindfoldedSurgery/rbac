@@ -114,7 +114,10 @@ github:
     trexflanken:
       name: github
       namespace: trexflanken
-
+    borncfdyndns:
+      name: github
+      namespace: born-cf-dyndns
+    
 github_config_renewal:
   namespace: mgmt
   serviceaccount:
