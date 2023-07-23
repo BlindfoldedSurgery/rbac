@@ -7,7 +7,6 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: Role
   name: {{ .Values.dashboard.role.name }}
-  namespace: {{ .Values.dashboard.namespace }}
 subjects:
 - kind: ServiceAccount
   name: {{ .Values.dashboard.serviceaccount.name }}
