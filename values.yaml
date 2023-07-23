@@ -26,6 +26,7 @@ namespaces:
   - argocd
   # - monitoring
   - trexflanken
+  - mgmt
 
 github:
   clusterrole:
@@ -117,6 +118,9 @@ github:
     borncfdyndns:
       name: github
       namespace: born-cf-dyndns
+    mgmt:
+      name: github
+      namespace: mgmt
     
 github_config_renewal:
   namespace: mgmt
