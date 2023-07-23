@@ -7,7 +7,6 @@ namespaces:
   - wooglife
   - telegram-bots
   # - monica
-  # - minio
   # - charts
   - festival
   - abfahrt
@@ -58,9 +57,6 @@ github:
     default:
       name: github
       namespace: default
-    # minio:
-    #   name: github
-    #   namespace: minio
     # charts:
     #   name: github
     #   namespace: charts
