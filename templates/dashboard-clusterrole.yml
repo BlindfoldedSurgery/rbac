@@ -1,8 +1,7 @@
 apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
+kind: ClusterRole
 metadata:
-  name: {{ .Values.dashboard.role.name }}
-  namespace: {{ .Values.dashboard.namespace }}
+  name: {{ .Values.dashboard.clusterrole.name }}
 rules:
 - apiGroups: ["", "networking.k8s.io"]
   resources: ["ingresses", "namespaces"]

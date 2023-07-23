@@ -155,9 +155,9 @@ rbac:
 
 dashboard:
   namespace: mgmt
-  role:
+  clusterrole:
     name: dashboard
-  rolebinding:
+  clusterrolebinding:
     name: dashboard
   serviceaccount:
     name: dashboard
