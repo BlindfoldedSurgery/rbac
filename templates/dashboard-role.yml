@@ -1,0 +1,9 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: {{ .Values.dashboard.role.name }}
+  namespace: {{ .Values.dashboard.namespace }}
+rules:
+- apiGroups: ["", "networking.k8s.io"]
+  resources: ["ingresses", "namespaces"]
+  verbs: ["list", "get"]

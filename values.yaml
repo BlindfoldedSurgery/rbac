@@ -152,3 +152,12 @@ rbac:
     name: rbac-github
   serviceaccount:
     name: rbac-github
+
+dashboard:
+  namespace: mgmt
+  role:
+    name: dashboard
+  rolebinding:
+    name: dashboard
+  serviceaccount:
+    name: dashboard
