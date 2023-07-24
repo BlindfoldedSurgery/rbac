@@ -26,6 +26,7 @@ namespaces:
   # - monitoring
   - trexflanken
   - mgmt
+  - cattle-system
 
 github:
   clusterrole:
