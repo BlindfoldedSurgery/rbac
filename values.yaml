@@ -21,7 +21,7 @@ namespaces:
   - observability
   # - longhorn-system
   - istio-system
-  # - cert-manager
+  - cert-manager
   - argocd
   # - monitoring
   - trexflanken
