@@ -19,7 +19,7 @@ namespaces:
   - pypi
   - action-example
   - observability
-  # - longhorn-system
+  - longhorn-system
   - istio-system
   - cert-manager
   - argocd
