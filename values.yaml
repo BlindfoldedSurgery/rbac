@@ -27,6 +27,7 @@ namespaces:
   - trexflanken
   - mgmt
   - cattle-system
+  - blindfoldedsurgery
 
 github:
   clusterrole:
