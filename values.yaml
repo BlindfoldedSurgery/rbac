@@ -119,6 +119,9 @@ github:
     mgmt:
       name: github
       namespace: mgmt
+    blindfoldedSurgery:
+      name: github
+      namespace: blindfoldedsurgery
     
 github_config_renewal:
   namespace: mgmt
