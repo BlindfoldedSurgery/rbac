@@ -28,6 +28,8 @@ namespaces:
   - mgmt
   - cattle-system
   - blindfoldedsurgery
+  - telegram-songlinker-bot
+  - born-cf-dyndns
 
 github:
   clusterrole:
