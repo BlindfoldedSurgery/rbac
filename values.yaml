@@ -164,3 +164,12 @@ dashboard:
     name: dashboard
   serviceaccount:
     name: dashboard
+
+clusterissuer:
+  namespace: cert-manager
+  clusterrole:
+    name: clusterissuer
+  clusterrolebinding:
+    name: clusterissuer
+  serviceaccount:
+    name: clusterissuer
