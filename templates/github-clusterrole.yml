@@ -3,6 +3,6 @@ kind: ClusterRole
 metadata:
   name: {{ .Values.github.clusterrole.name }}
 rules:
-- apiGroups: ["", "apps", "batch", "networking.k8s.io", "acid.zalan.do"]
-  resources: ["deployments", "configmaps", "secrets", "persistentvolumes", "persistentvolumeclaims", "pods", "services", "ingresses", "statefulsets", "replicasets", "cronjobs", "jobs", "postgresqls"]
+- apiGroups: ["", "apps", "batch", "networking.k8s.io", "acid.zalan.do", "rbac.authorization.k8s.io"]
+  resources: ["serviceaccounts", "roles", "rolebindings", "deployments", "configmaps", "secrets", "persistentvolumes", "persistentvolumeclaims", "pods", "services", "ingresses", "statefulsets", "replicasets", "cronjobs", "jobs", "postgresqls"]
   verbs: ["list", "get", "update", "create", "watch", "edit", "patch", "delete"]
