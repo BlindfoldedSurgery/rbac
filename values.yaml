@@ -30,6 +30,7 @@ namespaces:
   - blindfoldedsurgery
   - telegram-songlinker-bot
   - born-cf-dyndns
+  - mixology
 
 github:
   clusterrole:
@@ -118,6 +119,9 @@ github:
     borncfdyndns:
       name: github
       namespace: born-cf-dyndns
+    mixology:
+      name: github
+      namespace: mixology
     mgmt:
       name: github
       namespace: mgmt
