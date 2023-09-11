@@ -20,7 +20,6 @@ namespaces:
   - action-example
   - observability
   - longhorn-system
-  - istio-system
   - cert-manager
   - argocd
   # - monitoring
@@ -31,6 +30,7 @@ namespaces:
   - telegram-songlinker-bot
   - born-cf-dyndns
   - mixology
+  - btd6teams
 
 github:
   clusterrole:
