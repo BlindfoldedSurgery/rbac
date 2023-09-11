@@ -2,8 +2,7 @@ name: Build and deploy
 
 on:
   push:
-    branches:
-      - master
+  pull_request:
 
 jobs:
   lint:
@@ -17,22 +16,3 @@ jobs:
         uses: BlindfoldedSurgery/github-action-helm@v0.3.0
         with:
           raw_command: lint --strict
-
-  deploy:
-    name: "Publish to k8s"
-    runs-on: ubuntu-latest
-    needs: lint
-    steps:
-      - uses: actions/checkout@v4
-      - name: update password in manifest.yml
-        run: sed -i -e "s#__TAG__#${GITHUB_SHA}#g" values.yaml
-      - name: install helm chart
-        uses: BlindfoldedSurgery/github-action-helm@v0.3.0
-        with:
-          subcommand: upgrade
-          ref: .
-          release_name: rbac
-          namespace: mgmt
-          atomic: true
-          install: true
-          kubeconfig: ${{ secrets.KUBECONFIG_RAW }}
