@@ -177,3 +177,12 @@ clusterissuer:
     name: clusterissuer
   serviceaccount:
     name: clusterissuer
+
+polarlightstate:
+  namespace: wooglife
+  role:
+    name: polarlightstate
+  rolebinding:
+    name: polarlightstate
+  serviceaccount:
+    name: polarlightstate
