@@ -9,11 +9,4 @@ rules:
   resources:
   - configmaps
   verbs:
-  - list
-  - get
-  - update
-  - create
-  - watch
-  - edit
-  - patch
-  - delete
+  - '*'
