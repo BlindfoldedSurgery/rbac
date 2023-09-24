@@ -1,4 +1,4 @@
-name: Build and deploy
+name: lint
 
 on:
   push:
@@ -15,4 +15,6 @@ jobs:
       - name: install helm chart
         uses: BlindfoldedSurgery/github-action-helm@v0.3.0
         with:
-          raw_command: lint --strict
+          subcommand: lint
+          path: .
+
