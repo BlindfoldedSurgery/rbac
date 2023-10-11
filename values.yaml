@@ -31,7 +31,6 @@ namespaces:
   - born-cf-dyndns
   - mixology
   - btd6teams
-  - datadog
   - eiersaft
 
 github:
