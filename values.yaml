@@ -129,6 +129,9 @@ github:
     blindfoldedSurgery:
       name: github
       namespace: blindfoldedsurgery
+    eiersaft:
+      name: github
+      namespace: eiersaft
     
 github_config_renewal:
   namespace: mgmt
