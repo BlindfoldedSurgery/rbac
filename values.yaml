@@ -22,7 +22,7 @@ namespaces:
   - longhorn-system
   - cert-manager
   - argocd
-  # - monitoring
+  - monitoring
   - trexflanken
   - mgmt
   - cattle-system
@@ -132,6 +132,9 @@ github:
     eiersaft:
       name: github
       namespace: eiersaft
+    monitoring:
+      name: github
+      namespace: monitoring
     
 github_config_renewal:
   namespace: mgmt
