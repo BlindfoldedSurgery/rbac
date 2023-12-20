@@ -9,7 +9,7 @@ metadata:
     alertmanagerConfig: {{ $namespace }}
 spec:
   route:
-    receiver: 'telegram'
+    receiver: 'monitoring/telegram-routing/telegram'
     matchers:
     - name: severity
       regex: true
