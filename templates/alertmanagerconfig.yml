@@ -1,6 +1,6 @@
 {{- range $namespace := .Values.namespaces }}
+{{- if ne $namespace "monitoring" }}
 ---
-{{- if ne $namespace "monitoring" -}}
 apiVersion: monitoring.coreos.com/v1alpha1
 kind: AlertmanagerConfig
 metadata:
