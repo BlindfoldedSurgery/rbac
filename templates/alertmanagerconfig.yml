@@ -22,7 +22,7 @@ spec:
         key: token
         name: alertmanager-telegram-token
         optional: false
-      chatID: "-1002117545398"
+      chatID: -1002117545398
       sendResolved: true
       parseMode: HTML
 ---
