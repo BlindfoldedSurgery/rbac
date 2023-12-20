@@ -9,9 +9,35 @@ metadata:
     alertmanagerConfig: {{ $namespace }}
 spec:
   route:
-    receiver: 'monitoring/telegram-routing/telegram'
+    receiver: 'telegram'
     matchers:
     - name: severity
       regex: true
       value: "warning|critical"
+  receivers:
+  - name: 'telegram'
+    telegramConfigs:
+    - apiURL: https://api.telegram.org
+      botToken:
+        key: token
+        name: alertmanager-telegram-token
+        optional: false
+      chatID: "-1002117545398"
+      sendResolved: true
+      parseMode: HTML
+---
+apiVersion: external-secrets.io/v1beta1
+kind: ExternalSecret
+metadata:
+  name: alertmanager-telegram-token
+  namespace: monitoring
+spec:
+  data:
+  - remoteRef:
+      key: TELEGRAM_PROMETHEUS_TOKEN
+    secretKey: token
+  refreshInterval: 1h0m0s
+  secretStoreRef:
+    kind: ClusterSecretStore
+    name: mgmt-prod
 {{- end }}
