@@ -30,7 +30,7 @@ apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret
 metadata:
   name: alertmanager-telegram-token
-  namespace: monitoring
+  namespace: {{ $namespace }}
 spec:
   data:
   - remoteRef:
