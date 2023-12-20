@@ -1,4 +1,5 @@
 {{- range $namespace := .Values.namespaces }}
+{{- if ne .Release.Namespace "monitoring" -}}
 ---
 apiVersion: monitoring.coreos.com/v1alpha1
 kind: AlertmanagerConfig
