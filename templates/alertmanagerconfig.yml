@@ -1,0 +1,15 @@
+{{- range $namespace := .Values.namespaces }}
+apiVersion: monitoring.coreos.com/v1alpha1
+kind: AlertmanagerConfig
+metadata:
+  name: {{ $namespace }}
+  labels:
+    alertmanagerConfig: {{ $namespace }}
+spec:
+  route:
+    receiver: 'telegram'
+    matchers:
+    - name: severity
+      regex: true
+      value: "warning|critical"
+{{- end }}
