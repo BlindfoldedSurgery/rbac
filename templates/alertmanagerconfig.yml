@@ -1,5 +1,5 @@
 {{- range $namespace := .Values.namespaces }}
-{{- if ne .Release.Namespace "monitoring" -}}
+{{- if ne $namespace "monitoring" -}}
 ---
 apiVersion: monitoring.coreos.com/v1alpha1
 kind: AlertmanagerConfig
@@ -41,4 +41,5 @@ spec:
   secretStoreRef:
     kind: ClusterSecretStore
     name: mgmt-prod
+{{- end }}
 {{- end }}
