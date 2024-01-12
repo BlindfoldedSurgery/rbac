@@ -32,6 +32,7 @@ namespaces:
   - mixology
   - btd6teams
   - eiersaft
+  - delivery-ratings
 
 github:
   clusterrole:
@@ -132,6 +133,9 @@ github:
     eiersaft:
       name: github
       namespace: eiersaft
+    delivery_ratings:
+      name: github
+      namespace: delivery-ratings
     
 github_config_renewal:
   namespace: mgmt
